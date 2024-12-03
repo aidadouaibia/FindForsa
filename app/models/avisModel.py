@@ -1,12 +1,19 @@
-from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Optional
+
+# Model to handle incoming review data
 class AvisBase(BaseModel):
     avis: str
     id_auteur: str
     role_auteur: str
 
-class AvisResponse(AvisBase):
+# Response Model for reviews
+class AvisResponse(BaseModel):
+    id_auteur: Optional[str]
+    role_auteur: str
     id: str
+    avis: str
+    nom_complet: str  # Full name (nom + prenom)
+    
     class Config:
         orm_mode = True
