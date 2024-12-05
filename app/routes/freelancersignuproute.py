@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from app.controllers.freelancersignupcontroller import save_step1, save_step2, save_step3, save_step4
-from app.models.freelancerModel import Step1, Step2, Step3, Step4 ,FreelancerBase
+from app.models.freelancerModel import Step1, Step2, Step3, Step4 
+
 from app.database import db
 from bson import ObjectId
 
@@ -56,3 +57,6 @@ def step4(freelancer_id: str, data: Step4):
     if result.matched_count == 0:
         raise HTTPException(status_code=404, detail="Freelancer not found")
     return {"message": "Step 4 data added"}
+
+
+

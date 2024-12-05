@@ -13,9 +13,10 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
     password: str
 
-class UserResponse(UserBase):
-     success: bool
-     
+class UserResponse(BaseModel):
+    id: str
+    email: str
+    
 class UserSignUp(BaseModel):
     nom: str
     prenom: str

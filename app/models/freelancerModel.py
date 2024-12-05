@@ -55,3 +55,7 @@ class FreelancerResponse(FreelancerBase):
     _id: str
     class Config:
         orm_mode = True
+
+class SigninRequest(BaseModel):
+    email: str
+    password: str        
