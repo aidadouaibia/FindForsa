@@ -4,6 +4,7 @@ from typing import List, Optional
 
 
 
+
 class Step1(BaseModel):
     nom: str
     prenom: str
@@ -21,7 +22,7 @@ class Step3(BaseModel):
     Dribble: Optional[str] = None
     Behance: Optional[str] = None
     Expertise: str
-    Categories: List[str]
+    Categories: Optional[List[str]] = []
 
 class Step4(BaseModel):
     num_carte: str
