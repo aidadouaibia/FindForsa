@@ -18,7 +18,7 @@ async def matching_recommendations(freelancer_id: str, top_n: int = 10):
     freelancer_profession = freelancer.get("profession")
     freelancer_categories = freelancer.get("Categories", [])
     freelancer_expertise = freelancer.get("Expertise", "").split(", ")
-    freelancer_level = freelancer.get("level", "Junior").lower()
+    freelancer_level = freelancer.get("level", "Beginner").lower()
     freelancer_description = freelancer.get("description", "")
 
     # Fetch all projects
