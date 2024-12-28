@@ -12,7 +12,7 @@ class ProjectBase(BaseModel):
     specifications: Optional[List[str]] = None
     contact: Optional[str] = None
     id_user: str
-    categories: List[str]
+    Categories: List[str]
 
 class ProjectResponse(ProjectBase):
     id: str  # The id is a string now, since we converted ObjectId to string
