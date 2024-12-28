@@ -1,5 +1,9 @@
 from dotenv import load_dotenv
+<<<<<<< HEAD
 import os 
+=======
+import os
+>>>>>>> friend/lil
 
 load_dotenv()
 
