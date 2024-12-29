@@ -1,4 +1,8 @@
 # Virtual environment
+<<<<<<< HEAD
+env/
+=======
+>>>>>>> friend/lil
 
 # Python-related
 __pycache__/

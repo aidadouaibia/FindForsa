@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List, Optional
+<<<<<<< HEAD
+=======
 
 
 
@@ -31,6 +33,7 @@ class Step4(BaseModel):
     nom_carte: str
 
 
+>>>>>>> friend/lil
 class FreelancerBase(BaseModel):
     nom: str
     prenom: str
@@ -49,6 +52,15 @@ class FreelancerBase(BaseModel):
     code_carte: str
     nom_carte: str
 
+<<<<<<< HEAD
+class FreelancerCreate(FreelancerBase):
+    password: str
+
+class FreelancerResponse(FreelancerBase):
+    id: str
+    class Config:
+        orm_mode = True
+=======
 class FreelancerStep1(FreelancerBase):
     password: str
 
@@ -60,3 +72,4 @@ class FreelancerResponse(FreelancerBase):
 class SigninRequest(BaseModel):
     email: str
     password: str        
+>>>>>>> friend/lil

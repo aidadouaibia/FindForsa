@@ -7,7 +7,10 @@ from app.database import db  # Import the database connection
 project_router = APIRouter()
 
 @project_router.post("/projects/", response_model=ProjectResponse)
+<<<<<<< HEAD
+=======
 
+>>>>>>> friend/lil
 def create_project(project: ProjectBase):
     """
     Function to create a project in the MongoDB collection.
@@ -23,10 +26,21 @@ def create_project(project: ProjectBase):
         project_data["id"] = str(result.inserted_id)
 
         # Return the project response model
+<<<<<<< HEAD
+        return {
+            "data": ProjectResponse(**project_data),
+            "message": "Project added successfully"
+        }
+=======
         return ProjectResponse(**project_data)
+>>>>>>> friend/lil
 
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error creating project: {str(e)}"
+<<<<<<< HEAD
         )
+=======
+        )
+>>>>>>> friend/lil

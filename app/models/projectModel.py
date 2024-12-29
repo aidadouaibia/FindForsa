@@ -12,9 +12,15 @@ class ProjectBase(BaseModel):
     specifications: Optional[List[str]] = None
     contact: Optional[str] = None
     id_user: str
+<<<<<<< HEAD
+
+class ProjectResponse(ProjectBase):
+    id: str
+=======
     Categories: List[str]
 
 class ProjectResponse(ProjectBase):
     id: str  # The id is a string now, since we converted ObjectId to string
+>>>>>>> friend/lil
     class Config:
         orm_mode = True
