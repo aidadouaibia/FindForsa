@@ -9,4 +9,11 @@ endpoints = APIRouter()
 @endpoints.get("/")
 def home():
 
+    users = list(db["users"].find())
+    # Convert ObjectId to string for JSON serialization
+    for user in users:
+        user["_id"] = str(user["_id"])
+    return {"message": "Welcome home", "users": users}
+
+
     return {"message": "Welcome home"}
